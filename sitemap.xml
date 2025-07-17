@@ -6,23 +6,23 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://raslansmart.com/خدمات.html</loc>
+    <loc>https://raslansmart.com/control</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://raslansmart.com/services</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://raslansmart.com/clients</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://raslansmart.com/عملك.html</loc>
+    <loc>https://raslansmart.com/projects</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://raslansmart.com/كنترول.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://raslansmart.com/مشاريع.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
