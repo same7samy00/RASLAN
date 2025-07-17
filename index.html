@@ -5,8 +5,7 @@
     <meta name="keywords" content="رسلان, شركة رسلان, قص الخرسانة, قص خرسانة مسلح, قص وتخريم الخرسانة, معالجة الخرسانة, تخريم الخرسانة بالكور, قص المناشير الماسية, قص الجدران الخرسانية, قص الأعمدة الخرسانية, شركات قص الخرسانة مصر, قص خرسانة بدون اهتزاز, قص خرسانة سريع, أفضل شركة قص خرسانة, أسعار قص الخرسانة">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="ar">رسلان - لحلول المقاولات والإنشاءات المتطورة في مصر والشرق الأوسط</title>
-    <title data-lang="en">Raslan - Advanced Contracting & Construction Solutions in Egypt & Middle East</title>
+    <title id="dynamic-title">رسلان - لحلول المقاولات والإنشاءات المتطورة في مصر والشرق الأوسط</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/HktJ2y6z/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="shortcut icon" href="https://i.postimg.cc/HktJ2y6z/favicon-96x96.png" />
@@ -508,11 +507,6 @@
     </style>
 </head>
 <body>
-    <div class="seo-text" style="display:none;">
-        <h1>شركة رسلان لقص الخرسانة - خبرة ودقة وسرعة في مصر</h1>
-        <h2>أفضل خدمات قص وتخريم الخرسانة بأسعار تنافسية</h2>
-        <p>في شركة رسلان، نقدم جميع خدمات قص الخرسانة سواء قص الخرسانة المسلحة، تخريم الخرسانة بالكور، أو معالجة الأسطح الخرسانية. نستخدم أحدث المناشير الماسية لضمان قص نظيف بدون اهتزازات أو تشققات. خبرتنا تمتد عبر مصر، ونسعى دائمًا لتقديم خدمة قص خرسانة سريعة، دقيقة، وبأقل الأسعار.</p>
-    </div>
     <header id="scrolled-header" class="scrolled-header">
         <div class="header-content-container">
             <div class="header-logo">
@@ -930,11 +924,13 @@
             updateLanguageButtonText(lang); // Update button text after setting language
             showWhatsappNotification(); // Re-show the notification with the correct language
 
-            // Update title tags based on language
-            const titleAr = document.querySelector('title[data-lang="ar"]');
-            const titleEn = document.querySelector('title[data-lang="en"]');
-            if (titleAr) titleAr.style.display = lang === 'ar' ? 'block' : 'none';
-            if (titleEn) titleEn.style.display = lang === 'en' ? 'block' : 'none';
+            // Update the single title tag content
+            const dynamicTitle = document.getElementById('dynamic-title');
+            if (lang === 'ar') {
+                dynamicTitle.textContent = "رسلان - لحلول المقاولات والإنشاءات المتطورة في مصر والشرق الأوسط";
+            } else {
+                dynamicTitle.textContent = "Raslan - Advanced Contracting & Construction Solutions in Egypt & Middle East";
+            }
         }
 
         window.toggleLanguage = function() {
@@ -1043,7 +1039,7 @@
                 const browserLang = navigator.language || navigator.languages[0];
                 initialLang = browserLang.startsWith('ar') ? 'ar' : 'en';
             }
-            setLanguage(initialLang);
+            setLanguage(initialLang); // This will now correctly set the title as well
         });
     </script>
 </body>
