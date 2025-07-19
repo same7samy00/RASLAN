@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="ar">رسلان - جميع الخدمات</title>
-    <title data-lang="en">Raslan - All Services</title>
+    <title>رسلان للحلول الذكية | جميع خدمات قص الخرسانة، الترميم، التخريم، والإنشاءات في مصر</title>
+    
+    <meta name="description" content="اكتشف مجموعة واسعة من خدمات رسلان للحلول الذكية: قص وتقطيع الخرسانة، تخريم وتزريع الأشاير، الترميم والتدعيم، الإنشاءات المتطورة، العزل، أرضيات الإيبوكسي، التشطيبات الفاخرة، والهدم الذكي في مصر.">
+    
+    <meta name="keywords" content="خدمات رسلان, قص خرسانة, تقطيع خرسانة, تخريم خرسانة, تزريع أشاير, ترميم مباني, تدعيم منشآت, إنشاءات خرسانية, عزل مائي, عزل حراري, أرضيات إيبوكسي, فاير ستوب, تشطيبات داخلية, تشطيبات خارجية, مقاولات مصر, أفضل شركة خدمات هندسية">
+    
     <link rel="icon" href="https://i.postimg.cc/mDcf1TN3/Untitle22d-8-01.png" type="image/png">
+    
+    <link rel="preload" href="https://fonts.gstatic.com/s/cairo/v29/SLXGc1nY6HkvalbFh7Pz7_l0e5J-Wz5o.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
         /* CSS Shared from Main Page - Essential for consistent styling */
         :root {
@@ -635,6 +644,9 @@
                 };
                 modalImage.src = currentGalleryImages[currentImageIndex];
 
+                // Update alt text for the main modal image
+                modalImage.alt = `${modalServiceTitleEn.textContent || 'Service'} large image ${currentImageIndex + 1}`; // Improved alt text
+
                 // Update active thumbnail indicator
                 modalGalleryThumbnails.querySelectorAll('img').forEach((thumb, index) => {
                     if (index === currentImageIndex) {
@@ -692,10 +704,9 @@
             document.documentElement.setAttribute('lang', lang);
             document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
             localStorage.setItem('preferredLanguage', lang);
-            const titleAr = document.querySelector('title[data-lang="ar"]');
-            const titleEn = document.querySelector('title[data-lang="en"]');
-            if (titleAr) titleAr.style.display = lang === 'ar' ? 'block' : 'none';
-            if (titleEn) titleEn.style.display = lang === 'en' ? 'block' : 'none';
+            // Dynamic title update via JS is no longer needed as there's a single static <title> tag.
+            // For example, if your Firebase has separate titles for each language, you would update it here:
+            // document.title = lang === 'ar' ? "عنوان الصفحة بالعربي" : "Page Title in English";
             showWhatsappNotification();
         }
 
@@ -707,7 +718,7 @@
             const poweredByAr = document.getElementById('footer-powered-by-ar');
             const poweredByEn = document.getElementById('footer-powered-by-en');
             if (poweredByAr) poweredByAr.innerHTML = `${data.poweredByAr || ''} <a href="${data.developerWhatsapp || '#'}" target="_blank" class="font-bold hover:underline"><i class="fab fa-whatsapp"></i></a>`;
-            if (poweredByEn) poweredByEn.innerHTML = `${data.poweredByEn || ''} <a href="${data.developerWhatsapp || '#'}" target="_blank" class="font-bold hover:underline"><i class="fab fa-whatsapp"></i></a>`;
+            if (poweredByEn) poweredByEn.innerHTML = `${data.developerWhatsapp || ''} <a href="${data.developerWhatsapp || '#'}" target="_blank" class="font-bold hover:underline"><i class="fab fa-whatsapp"></i></a>`;
         }
 
         // Initial Load
