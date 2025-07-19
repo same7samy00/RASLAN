@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="ar">رسلان - جميع المشاريع</title>
-    <title data-lang="en">Raslan - All Projects</title>
+    <title>رسلان للحلول الذكية | جميع مشاريع قص الخرسانة، الترميم، التخريم، والإنشاءات في مصر</title>
+    
+    <meta name="description" content="اكتشف جميع مشاريع رسلان للحلول الذكية في قص الخرسانة، تخريم الأشاير، الترميم، والإنشاءات. استعرض أعمالنا المنجزة بدقة واحترافية عالية في مصر.">
+    
+    <meta name="keywords" content="مشاريع رسلان, قص خرسانة, تخريم خرسانة, ترميم منشآت, تدعيم مباني, أعمال إنشائية, شركات مقاولات مصر, معرض أعمال, صور مشاريع, مشاريع هندسية, Raslan projects, concrete cutting projects, structural strengthening projects">
+    
     <link rel="icon" href="https://i.postimg.cc/mDcf1TN3/Untitle22d-8-01.png" type="image/png">
     
     <link rel="preload" href="https://fonts.gstatic.com/s/cairo/v29/SLXGc1nY6HkvalbFh7Pz7_l0e5J-Wz5o.woff2" as="font" type="font/woff2" crossorigin>
@@ -24,7 +28,8 @@
     <header class="page-header">
         <div class="header-content-container">
             <div class="header-logo">
-                <img src="https://i.postimg.cc/vTSqdn65/20250620-0236-Soapstone-on-Quarry-remix-01jy58qdz9eyxrq9wmb23hy49x-01.png" alt="Raslan Logo" class="h-10 w-auto" loading="lazy">
+                <h1 style="display: none;">رسلان للحلول الذكية - مشاريع</h1>
+                <img src="https://i.postimg.cc/vTSqdn65/20250620-0236-Soapstone-on-Quarry-remix-01jy58qdz9eyxrq9wmb23hy49x-01.png" alt="شعار رسلان للحلول الذكية" class="h-10 w-auto" loading="lazy">
             </div>
         </div>
     </header>
@@ -296,7 +301,7 @@
             const poweredByAr = document.getElementById('footer-powered-by-ar');
             const poweredByEn = document.getElementById('footer-powered-by-en');
             if (poweredByAr) poweredByAr.innerHTML = `${data.poweredByAr || ''} <a href="${data.developerWhatsapp || '#'}" target="_blank" class="font-bold hover:underline"><i class="fab fa-whatsapp"></i></a>`;
-            if (poweredByEn) poweredByEn.innerHTML = `${data.poweredByEn || ''} <a href="${data.developerWhatsapp || '#'}" target="_blank" class="font-bold hover:underline"><i class="fab fa-whatsapp"></i></a>`;
+            if (poweredByEn) poweredByEn.innerHTML = `${data.developerWhatsapp || ''} <a href="${data.developerWhatsapp || '#'}" target="_blank" class="font-bold hover:underline"><i class="fab fa-whatsapp"></i></a>`;
         }
 
         document.addEventListener('DOMContentLoaded', async () => {
