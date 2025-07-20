@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="ar">رسلان - عملائنا</title>
-    <title data-lang="en">Raslan - Our Clients</title>
+    <title>رسلان - عملائنا</title>
+    <link rel="canonical" href="https://raslansmart.com/clients.html">
+    <meta name="description" content="تعرف على عملائنا في رسلان للحلول الذكية، خبراء قص وتقطيع الخرسانة والتدعيم بأعلى جودة في مصر.">
+    <meta name="keywords" content="رسلان, قص الخرسانة, عملائنا, مشاريعنا, تدعيم, ترميم, مصر">
     <link rel="icon" href="https://i.postimg.cc/mDcf1TN3/Untitle22d-8-01.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -262,7 +263,7 @@
     <header class="page-header">
         <div class="header-content-container">
             <div class="header-logo">
-                <img src="https://i.postimg.cc/vTSqdn65/20250620-0236-Soapstone-on-Quarry-remix-01jy58qdz9eyxrq9wmb23hy49x-01.png" alt="Raslan Logo" class="h-10 w-auto">
+                <img src="https://i.postimg.cc/vTSqdn65/20250620-0236-Soapstone-on-Quarry-remix-01jy58qdz9eyxrq9wmb23hy49x-01.png" alt="Raslan Logo" class="h-10 w-auto" loading="lazy">
             </div>
         </div>
     </header>
@@ -354,7 +355,7 @@
 
                 clientCard.innerHTML = `
                     <div class="image-wrapper" style="height: auto; min-height: 120px; display: flex; justify-content: center; align-items: center; width: 100%;">
-                        <img src="${client.logoUrl || ''}" alt="${client.nameAr || 'Client Logo'}" class="client-card-logo">
+                        <img src="${client.logoUrl || ''}" alt="${client.nameAr || 'Client Logo'}" class="client-card-logo" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-[#0c4873]" data-lang="ar">${client.nameAr || ''}</h3>
@@ -419,10 +420,12 @@
             document.documentElement.setAttribute('lang', lang);
             document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
             localStorage.setItem('preferredLanguage', lang);
-            const titleAr = document.querySelector('title[data-lang="ar"]');
-            const titleEn = document.querySelector('title[data-lang="en"]');
-            if (titleAr) titleAr.style.display = lang === 'ar' ? 'block' : 'none';
-            if (titleEn) titleEn.style.display = lang === 'en' ? 'block' : 'none';
+            // Update document title based on language
+            if (lang === 'ar') {
+                document.title = "رسلان - عملائنا";
+            } else {
+                document.title = "Raslan - Our Clients";
+            }
             showWhatsappNotification();
         }
 
