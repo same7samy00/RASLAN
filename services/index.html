@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رسلان للحلول الذكية | جميع خدمات قص الخرسانة، الترميم، التخريم، والإنشاءات في مصر</title>
+    <link rel="canonical" href="https://raslansmart.com/services.html">
     
     <meta name="description" content="اكتشف مجموعة واسعة من خدمات رسلان للحلول الذكية: قص وتقطيع الخرسانة، تخريم وتزريع الأشاير، الترميم والتدعيم، الإنشاءات المتطورة، العزل، أرضيات الإيبوكسي، التشطيبات الفاخرة، والهدم الذكي في مصر.">
     
@@ -704,9 +705,12 @@
             document.documentElement.setAttribute('lang', lang);
             document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
             localStorage.setItem('preferredLanguage', lang);
-            // Dynamic title update via JS is no longer needed as there's a single static <title> tag.
-            // For example, if your Firebase has separate titles for each language, you would update it here:
-            // document.title = lang === 'ar' ? "عنوان الصفحة بالعربي" : "Page Title in English";
+            // Update document title based on language
+            if (lang === 'ar') {
+                document.title = "رسلان للحلول الذكية | جميع خدمات قص الخرسانة، الترميم، التخريم، والإنشاءات في مصر";
+            } else {
+                document.title = "Raslan Smart Solutions | All Concrete Cutting, Renovation, Drilling, and Construction Services in Egypt";
+            }
             showWhatsappNotification();
         }
 
