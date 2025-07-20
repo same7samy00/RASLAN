@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رسلان للحلول الذكية | جميع مشاريع قص الخرسانة، الترميم، التخريم، والإنشاءات في مصر</title>
+    <link rel="canonical" href="https://raslansmart.com/projects.html">
     
     <meta name="description" content="اكتشف جميع مشاريع رسلان للحلول الذكية في قص الخرسانة، تخريم الأشاير، الترميم، والإنشاءات. استعرض أعمالنا المنجزة بدقة واحترافية عالية في مصر.">
     
@@ -286,10 +287,12 @@
             document.documentElement.setAttribute('lang', lang);
             document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
             localStorage.setItem('preferredLanguage', lang);
-            const titleAr = document.querySelector('title[data-lang="ar"]');
-            const titleEn = document.querySelector('title[data-lang="en"]');
-            if (titleAr) titleAr.style.display = lang === 'ar' ? 'block' : 'none';
-            if (titleEn) titleEn.style.display = lang === 'en' ? 'block' : 'none';
+            // Update document title based on language
+            if (lang === 'ar') {
+                document.title = "رسلان للحلول الذكية | جميع مشاريع قص الخرسانة، الترميم، التخريم، والإنشاءات في مصر";
+            } else {
+                document.title = "Raslan Smart Solutions | All Concrete Cutting, Renovation, Drilling, and Construction Projects in Egypt";
+            }
             showWhatsappNotification();
         }
 
